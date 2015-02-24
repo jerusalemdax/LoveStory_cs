@@ -92,7 +92,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LoveStory\LoveStory.csproj">
+    <ProjectReference Include="..\LoveStory\LoveStory_vs2013.csproj">
       <Project>{9309F7F4-C66C-45F8-884B-2EEB00638475}</Project>
       <Name>LoveStory</Name>
     </ProjectReference>
