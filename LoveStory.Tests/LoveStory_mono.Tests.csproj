@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73BB2BC6-C7BE-4D34-84AF-48369BDD0E8F}</ProjectGuid>
+    <ProjectGuid>{6EA4A109-435C-4AC0-97E2-0C6EBD7D21F4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LoveStory_mono.Tests</RootNamespace>
-    <AssemblyName>LoveStory_mono.Tests</AssemblyName>
+    <RootNamespace>LoveStory.Tests</RootNamespace>
+    <AssemblyName>LoveStory.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,15 +40,42 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LoveStory_mono\LoveStory_mono.csproj">
-      <Project>{76ACDADF-E4D0-479D-9072-BBF1170E241C}</Project>
-      <Name>LoveStory_mono</Name>
-    </ProjectReference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoveStory\LoveStory_mono.csproj">
+      <Project>{2C92D3A5-CD60-4396-AA46-E3ABBAF858E0}</Project>
+      <Name>LoveStory_mono</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
